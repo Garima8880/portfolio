@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garima Chansi Shrestha - Portfolio</title>
+    <style>
+        :root {
+            --primary: #8725b1;
+            --accent: #234154;
+            --text: #333;
+            --bg: #f4f4f9;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+        }
+        a {
+            text-decoration: none;
+            color: var(--accent);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        .role {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .intro {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        section {
+            padding: 4rem 0;
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .skill {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-info {
+            padding: 1.5rem;
+        }
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        .project-info p {
+            margin-bottom: 1rem;
+        }
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+        }
+        .contact-link i {
+            font-size: 1.5rem;
+        }
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        @media (min-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            .hero {
+                flex-direction: row;
+                text-align: left;
+                justify-content: center;
+                gap: 3rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container hero">
+            <img src="https://github.com/Garima8880" alt="Garima Chansi Shrestha" class="profile-pic">
+            <div>
+                <h1>Garima Chansi Shrestha</h1>
+                <p class="role">BIT student</p>
+                <p class="intro">I build scalable web apps and love turning ideas into reality using code.</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div>
+                    <p>I'm a BIT student passionate about web development and creating meaningful digital experiences. My journey in programming started with Python and has since expanded to full-stack web development.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or learning about UI/UX design principles to create more intuitive applications.</p>
+                </div>
+                <div>
+                    <h3>Tech Skills</h3>
+                    <div class="skills">
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">Django</span>
+                        <span class="skill">React</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Task Manager App</h3>
+                        <p>A Django app to manage daily tasks with user auth and CRUD operations.</p>
+                        <a href="https://github.com/aaryamehta" target="_blank" rel="noopener noreferrer">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>This portfolio, built with HTML, CSS, and deployed on Render.</p>
+                        <a href="https://github.com/aaryamehta" target="_blank" rel="noopener noreferrer">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>API Weather Dashboard</h3>
+                        <p>A real-time weather app built with JavaScript and OpenWeatherMap API.</p>
+                        <a href="https://github.com/aaryamehta" target="_blank" rel="noopener noreferrer">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-links">
+                <a href="mailto:garimachansi123@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> garimachansi123@gmail.com
+                </a>
+                <a href="https://github.com/garima chansi shresthaa" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <i class="fab fa-github"></i> github.com/garimachansishrestha
+                </a>
+                <a href="https://www.linkedin.com/in/garima-chansi-3256a3341/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <i class="fab fa-linkedin"></i> linkedin.com/in/garima-chansi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Garima Chansi Shrestha</p>
+        </div>
+    </footer>
+</body>
+</html>
